@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Home - Krisha</title>
+</head>
+<body class="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-200 min-h-screen flex items-center justify-center">
+  <div id="body" class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl max-w-md sm:max-w-2xl text-center space-y-6">
+    <div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">👋 Hi, I'm Krisha</h1>
+      <p class="text-gray-600 text-base sm:text-lg">A CSIT student passionate about Designing. Dive into my portfolio!</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="about.html" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-500 transition">About</a>
+      <a href="skills.html" class="bg-indigo-600 text-white px-5 py-2 rounded-full  hover:bg-indigo-500 transition">Skills</a>
+      <a href="gallery.html" class="bg-purple-600 text-white px-5 py-2 rounded-full  hover:bg-purple-500 transition">Projects</a>
+      <a href="contact.html" class="bg-pink-600 text-white px-5 py-2 rounded-full  hover:bg-pink-700 transition">Contact</a>
+    </div>
+
+  
+  </div>
+<script>
+  const content = document.getElementById("body");
+
+
+  let hasSpoken = false;
+
+  content.addEventListener("mouseover", () => {
+    if (!hasSpoken) {
+      const message = new SpeechSynthesisUtterance(
+        "Hi, I'm Krisha. A CSIT student passionate about designing. Dive into my portfolio!"
+      );
+      speechSynthesis.speak(message);
+      
+      hasSpoken = true; // prevent future repeats
+    }
+  });
+  
+
+</script>
+
+</body>
+
+</html>
+
